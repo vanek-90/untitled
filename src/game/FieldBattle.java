@@ -23,23 +23,24 @@ public class FieldBattle {
             }
         }
     }
-            /**
-             * Вывод поля в консоль.
-             */
-            public void printField() {
-                char j = 'a';
-                for (int i = 1; i <= sizeField; i++)
-                    System.out.print(" "+i);
-                System.out.println("");
-                    for (int x = 0; x < sizeField; x++) {
-                            System.out.print(j);
-                        for (int y = 0; y < sizeField; y++) {
-                            System.out.print(' '+field[x][y]);
-                        }
-                        System.out.println("");
-                        while (j++>='j');
-                    }
 
+    /**
+     * Вывод поля в консоль.
+     */
+    public void printField() {
+        char j = 'a';
+        System.out.print(" ");
+        for (int i = 1; i <= sizeField; i++)
+            System.out.print(" " + i);
+        System.out.println("");
+        for (int x = 0; x < sizeField; x++) {
+            System.out.print((char) (j + x));
+            for (int y = 0; y < sizeField; y++) {
+                System.out.print(' ' + field[x][y]);
             }
+            System.out.println("");
         }
+
+    }
+}
 
